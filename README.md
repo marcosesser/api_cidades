@@ -8,4 +8,5 @@ Ela foi desenvolvida em Delphi, utilizando os FrameWorks:
 - Horse-Query;
 
 
-Como base de dados foi utilizado um banco Firebird (V-3.0.9).
+
+Como base de dados foi utilizado um banco Firebird (v_3.0.9).
