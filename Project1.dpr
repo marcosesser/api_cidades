@@ -8,6 +8,7 @@ uses
   Horse,
   Horse.Jhonson,
   Horse.Query,
+
   System.SysUtils,
   System.JSON,
   FireDAC.Comp.Client,
@@ -20,34 +21,24 @@ uses
   function GetConsoleWindow: HWND; stdcall; external kernel32;
 
 begin
-  try
-    Writeln('Precione ENTER para ocultar essa janela.');
-    Readln;
-    //hide the console window
-    ShowWindow(GetConsoleWindow, SW_HIDE);
 
-    //do something
-//    Sleep(5000);
-//
-//    Writeln('Press enter to exit');
-//    //show the console window
-//    ShowWindow(GetConsoleWindow, SW_SHOW);
-//    Readln;
-  except
-    on E: Exception do
-      Writeln(E.ClassName, ': ', E.Message);
-  end;
+  //Deixar rodando em segundo plano
+//  ShowWindow(GetConsoleWindow, SW_HIDE);
+
 
   THorse.Use(Jhonson);
   THorse.Use(Query);
 
-  THorse.Get('/Cidades/:UF',
+  THorse.Get('/:UF',
     procedure(Req: THorseRequest; Res: THorseResponse; Next: TProc)
     var
       UF : String;
       DADOS : TDadosCidades;
     begin
-      UF  :=  Req.Params['UF'];
+      UF  :=  UpperCase(Req.Params['UF']);
+
+      //LOG de consulta
+      Writeln(FormatDateTime('DD/MM/YYYY HH:MM:SS', now)+' - Consulta: '+UF);
 
       DADOS := TDadosCidades.Create;
       try
@@ -55,7 +46,6 @@ begin
       finally
         DADOS.DisposeOf;
       end;
-
     end);
 
   THorse.Listen(9000);
