@@ -7,4 +7,5 @@ Ela foi desenvolvida em Delphi, utilizando os FrameWorks:
 - Jhonson;
 - Horse-Query;
 
+
 Como base de dados foi utilizado um banco Firebird (V-3.0.9).
