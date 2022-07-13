@@ -13,9 +13,31 @@ uses
   FireDAC.Comp.Client,
   FireDAC.DApt,
   Data.DB,
+  VCL.Forms,
+  Winapi.Windows,
   control in 'control.pas';
 
+  function GetConsoleWindow: HWND; stdcall; external kernel32;
+
 begin
+  try
+    Writeln('Precione ENTER para ocultar essa janela.');
+    Readln;
+    //hide the console window
+    ShowWindow(GetConsoleWindow, SW_HIDE);
+
+    //do something
+//    Sleep(5000);
+//
+//    Writeln('Press enter to exit');
+//    //show the console window
+//    ShowWindow(GetConsoleWindow, SW_SHOW);
+//    Readln;
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+
   THorse.Use(Jhonson);
   THorse.Use(Query);
 
