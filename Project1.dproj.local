@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/12/01 15:02:48.000.517,=C:\Users\Marcos\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/03/07 18:32:51.000.019,=C:\Users\Marcos\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/03/07 18:43:33.000.819,=C:\Users\Marcos\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/04/26 17:57:58.000.767,=C:\Users\Marcos\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/13 14:23:48.003,H:\ProjetosGitHub\API_Estados_IBGE\Projeto\Project1.dproj=C:\Users\Marcos\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2022/07/13 14:38:24.434,=H:\ProjetosGitHub\API_Estados_IBGE\Projeto\Unit1.pas</Transaction>
+    <Transaction>2022/07/13 14:38:45.187,H:\ProjetosGitHub\API_Estados_IBGE\Projeto\control.pas=H:\ProjetosGitHub\API_Estados_IBGE\Projeto\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
